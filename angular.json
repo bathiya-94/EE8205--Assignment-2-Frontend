@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "mobile-phones-frontend"
+    }
+  },
+  "defaultProject": "mobile-phones-frontend",
+  "cli": {
+    "analytics": false
+  }
 }
