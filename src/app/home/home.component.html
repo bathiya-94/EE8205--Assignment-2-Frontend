@@ -1,0 +1,37 @@
+<p>Available Phone List</p>
+<div class="form__grop" fxLayout = "row">
+  <form class="example-form" [formGroup]="searchForm" (ngSubmit)="searchForm.valid && onSearchSubmit()" novalidate style="margin-right: 20px">
+    <mat-form-field class="example-full-width">
+      <mat-label>Search by Brand</mat-label>
+      <input matInput id ="searchInput" placeholder="Ex.Apple " value="Apple" [(ngModel)]="searchString"
+             formControlName="keyword">
+    </mat-form-field>
+    <button mat-button type="submit" class="mat-raised-button mat-primary" style="margin-left: 20px">Search</button>
+  </form>
+
+  <form class="example-form" [formGroup]="searchFormByName" (ngSubmit)="searchFormByName.valid && onSearchSubmitByName()" novalidate>
+    <mat-form-field class="example-full-width">
+      <mat-label>Search by Model</mat-label>
+      <input matInput id ="searchInput2" placeholder="Ex.Iphone11 " value="iphone11" [(ngModel)]="searchString2"
+             formControlName="keyword2">
+    </mat-form-field>
+    <button mat-button type="submit" class="mat-raised-button mat-primary" style="margin-left: 20px">Search</button>
+  </form>
+
+</div>
+<div fxLayout="row" class = "mat-elevation-z8 main__cls">
+  <div class="first__div" *ngFor="let item of phoneList">
+    <mat-card class="example-card" >
+      <img mat-card-image src= {{item.image}}>
+
+      <mat-card-content>
+        <div>{{item.brand}}</div>
+        <div>{{item.modelName}}</div>
+        <div>{{item.modelNo}}</div>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button>GET PRICES</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>

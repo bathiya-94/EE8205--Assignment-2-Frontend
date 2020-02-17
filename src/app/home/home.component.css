@@ -1,0 +1,16 @@
+.example-card {
+  max-width: 400px;
+}
+.first__div{
+ width: 150px;
+}
+
+.main__cls{
+  display: flex;
+}
+.first__div{
+  margin-left: 50px;
+}
+.form__grop{
+  display: flex;
+}
