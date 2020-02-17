@@ -36,7 +36,7 @@ export class RegisterComponent implements OnInit {
   }
 
   onRegSubmit() {
-    alert(this.user.name + ' ' + this.user.email + ' '  + this.user.password);
+    alert(this.user.name + ' ' + this.user.email);
     this.appHttpService.register(this.user).subscribe(
       res=>{
         alert('Success');
